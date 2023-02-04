@@ -7,8 +7,9 @@ from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
 import json
 
+
 options = Options()
-options.headless = False
+options.add_argument('--headless')
 browser = webdriver.Chrome(service=ChromeService(ChromeDriverManager().install()), options=options)
 browser.get('https://www.lib.uci.edu/study-space-locator')
 
@@ -18,8 +19,9 @@ click_button = browser.find_element(By.ID, "f_submit")
 click_button.click()
 names = browser.find_elements(By.CSS_SELECTOR, 'li.study ')
 
-
-
+src = browser.find_elements(By.XPATH,"//img[contains(@class,'center-image image-responsive')]")
+for items in src:
+    print(items.get_attribute("src"))
 
 
 for items in names:
