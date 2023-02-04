@@ -5,6 +5,7 @@ from selenium.webdriver.support import expected_conditions as EC
 from selenium.webdriver.chrome.options import Options
 from selenium.webdriver.chrome.service import Service as ChromeService
 from webdriver_manager.chrome import ChromeDriverManager
+import json
 
 options = Options()
 options.headless = False
@@ -21,3 +22,8 @@ names = browser.find_elements(By.CSS_SELECTOR, 'li.study ')
 
 
 
+for items in names:
+    attributes = items.text.split('\n')
+    str = (json.dumps({'Name': attributes[1], 'Location': attributes[2], 'Time':attributes[3]}))
+    print(str)
+    print()
