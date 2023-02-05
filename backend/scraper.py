@@ -24,6 +24,20 @@ for items in src:
     print(items.get_attribute("src"))
 
 
+
+amenities_lst = browser.find_elements(By.CLASS_NAME, "amenities-icon")
+for icons in amenities_lst:
+    amenity = icons.get_attribute('class')[21:]
+    print("Amenity: ", amenity)
+
+    div_class = icons.find_element(By.XPATH, "..")
+    parent = div_class.find_element(By.XPATH, "..")
+
+    parent_id = parent.get_attribute("id")
+    print("Parent class attribute:", parent_id)
+    
+
+
 for items in names:
     attributes = items.text.split('\n')
     str = (json.dumps({'Name': attributes[1], 'Location': attributes[2], 'Time':attributes[3]}))
