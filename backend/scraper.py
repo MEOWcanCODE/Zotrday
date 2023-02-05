@@ -30,33 +30,25 @@ for items in names:
 
 src = browser.find_elements(By.XPATH,"//img[contains(@class,'center-image image-responsive')]")
 img_list = []
-
-
-
 for items in src:
-    print(items.get_attribute("src"))
+    img_list.append(items.get_attribute("src"))
 
-
-for items in names:
-    attributes = items.text.split('\n')
-    str = (json.dumps({'Name': attributes[1], 'Location': attributes[2], 'Time':attributes[3]}))
-    print(str)
-    print()
+i = 0
+for spot in study_list:
+    study_list[spot]['Image-URL'] = img_list[i]
     i += 1
-
-
-
-
-
-
 
 amenities_lst = browser.find_elements(By.CLASS_NAME, "amenities-icon")
 for icons in amenities_lst:
     amenity = icons.get_attribute('class')[21:]
-    print("Amenity: ", amenity)
 
     div_class = icons.find_element(By.XPATH, "..")
     parent = div_class.find_element(By.XPATH, "..")
 
     parent_id = parent.get_attribute("id")
-    print("Parent class attribute:", parent_id)
+    study_list[parent_id]['Amenities'].append(amenity)
+
+for s in study_list:
+    print(json.dumps(study_list[s]))
+    print()
+
