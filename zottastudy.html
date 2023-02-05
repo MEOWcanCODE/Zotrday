@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html>
   <head>
     <link rel="stylesheet" type="text/css" href="./styles.css" />
@@ -11,78 +11,120 @@
       rel="stylesheet"
     />
   </head>
+ 
   <body>
     <div class="bg">
       <div>
-        <h1>zotta study!</h1>
+        <p class="webname">zotta study!</p>
         <div class="headerBorder"></div>
         <div class="highlight_img"></div>
-        <h6>Study space highlights</h6>
-      </div>
-      <div class="v11_19804">
-        <div class="name"></div>
-        <span class="v11_19788">Student Center</span>
-        <div class="name"></div>
-        <span class="v11_19765">Science Library</span>
-        <div class="name"></div>
-        <span class="v11_19767">Gateway Study Center</span>
-        <div class="name"></div>
-        <span class="v11_19766">Langson Library</span>
-        <div class="name"></div>
-        <span class="v11_19764">Grunigen Medical Library</span
-        ><span class="v11_19763">Buildings</span>
-      </div>
-      <div class="v11_19803">
-        <div class="name"></div>
-        <span class="v11_19742">Scanners</span>
-        <div class="name"></div>
-        <span class="v11_19730">Printers</span>
-        <div class="name"></div>
-        <span class="v11_19729">Digital Display</span>
-        <div class="name"></div>
-        <span class="v11_19741">3D scanner</span>
-        <div class="name"></div>
-        <span class="v11_19718">3D printer</span>
-        <div class="name"></div>
-        <span class="v11_19707">Whiteboard</span>
-        <div class="name"></div>
-        <span class="v11_19706">Public PC</span
-        ><span class="v11_19705">Additional features</span>
-      </div>
-      <div class="v11_19802">
-        <div class="name"></div>
-        <span class="v13_2010">Open Now</span>
-        <div class="name"></div>
-        <span class="v11_16740">Select a time range</span>
-        <div class="name"></div>
-        <span class="v11_19694">Select a start time</span
-        ><span class="v11_57">Open hours</span>
-      </div>
-      <div class="v11_19801">
-        <form>
-          <p>Collaboration Space:</p>
-          <input id="quiet" name="space" type="checkbox" value="quiet">
-          <label for="quiet">Quiet Space</label>
-          <br>
-          <input id="active" name="space" type="checkbox" value="active">
-          <label for="active">Active Space</label>
-          <br>
-          <input id="room" name="space" type="checkbox" value="room">
-          <label for="room">Study Rooms</label>
-        </form>
-      </div>
-      <span class="v8_13">Filters:</span>
-      <div class="v8_17">
-        <div class="v8_14"></div>
-        <span class="v8_12">Search</span>
+        <p class="highlightLbl">Study space highlights</p>
       </div>
       
-      <div class="name"></div>
-      <div class="name"></div>
-      <div class="name"></div>
-      <div class="name"></div>
-      <div class="name"></div>
+      <div>
+        <form>
+          <input type="text" name="searchBar" id="searchBar" placeholder="Search...">
+        </form>
+      </div>
+
+      <div class="body-container">
+        <div class="body-card">
+          <h1>Filters:</h1>
+          <div class="filters-container">
+            <div class="filter-card">
+              <h2>Buildings:</h2>
+                <input id="grunigen" name="library" type="checkbox" value="grunigen">
+                <label for="grunigen">Grunigen Medical Library</label>
+                <br>
+                <input id="studentcenter" name="library" type="checkbox" value="studentcenter">
+                <label for="studentcenter">Student Center</label>
+                <br>
+                <input id="gateway" name="library" type="checkbox" value="gateway">
+                <label for="gateway">Gateway Study Center</label>
+                <br>
+                <input id="langson" name="library" type="checkbox" value="langson">
+                <label for="langson">Langson Library</label>
+                <br>
+                <input id="science" name="library" type="checkbox" value="science">
+                <label for="science">Science Library</label>
+            </div>
+            <div id="special-card" class="filter-card">
+            </div>
+            
+            <div class="filter-card">
+              <h2>Additional features:</h2>
+                <input id="scanners" name="feature" type="checkbox" value="scanners">
+                <label for="scanners">Scanners</label>
+                <br>
+                <input id="printers" name="feature" type="checkbox" value="printers">
+                <label for="printers">Printers</label>
+                <br>
+                <input id="digitaldisplay" name="feature" type="checkbox" value="digitaldisplay">
+                <label for="digitaldisplay">Digital displays</label>
+                <br>
+                <input id="3Dscanner" name="feature" type="checkbox" value="3Dscanner">
+                <label for="3Dscanner">3D Scanners</label>
+                <br>
+                <input id="3Dprinter" name="feature" type="checkbox" value="3Dprinter">
+                <label for="3Dprinter">3D Printers</label>
+                <br>
+                <input id="whiteboard" name="feature" type="checkbox" value="whiteboard">
+                <label for="whiteboard">Whiteboards</label>
+                <br>
+                <input id="publicpc" name="feature" type="checkbox" value="publicpc">
+                <label for="publicpc">Public PCs</label>
+                <br>
+            </div>
+    
+            <div id="special-card" class="filter-card">
+            </div>
+    
+            <div class="filter-card">
+              <h2>Open hours:</h2>
+              <input id="opennow" name="hours" type="checkbox" value="opennow">
+              <label for="opennow">Open Now</label>
+              <br>
+              <label for="timerange">Specific start time</label>
+              <input type="text" id="timerange">
+            </div>
+    
+            <div id="special-card" class="filter-card">
+            </div>
+          </div>
+        </div>
+        <div class="body-card">
+          <h2>Here are your results!</h2>
+          <div class="results-container">
+            <div class="results-card">
+              <h2>[insert result 1]</h2>
+            </div>
+            <div class="results-card">
+              <h2>[insert result 2]</h2>
+            </div>
+            <div class="results-card">
+              <h2>[insert result 3]</h2>
+            </div>
+            <div class="results-card">
+              <h2>[insert result 4]</h2>
+            </div>
+            <div class="results-card">
+              <h2>[insert result 5]</h2>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+      <div class="wrapper">
+        <button class="button button_git" onclick="clickedgitlink()">github</gitbutton>
+        <button class="button button_aboutus" onclick="clickedgitlink()">About us</aboutusbutton>
+        <button class="button button_feedback" onclick="clikedgitlink()">Feedback</feedbackbutton>
+      </div>
+
     </div>
+
+      
   </body>
 </html>
 <br /><br />

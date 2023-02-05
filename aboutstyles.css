@@ -1,0 +1,70 @@
+body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+    background-color: #90a9b7;
+}
+
+h1{
+    font-family: 'GFS Didot', sans-serif;
+}
+
+h2, h3{
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.hackers{
+    font-family:'GFS Didot', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+
+}
+image{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
+    margin-left: 15px;
+
+}
+.hacker{
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    justify-content: space-evenly;
+    border-style: solid;
+    border-radius: 10px;
+    border-width: 2px ;
+
+    background-color:#efefef;
+
+    box-shadow:
+        10px -10px 0 -2px #001F54, 
+        10px -10px,
+        20px -20px 0 -2px #EFEFEF,
+        20px -20px;
+    transition: box-shadow 1s, top 1s, left 1s;
+    top: 0;
+    left: 0; 
+}
+
+.hacker:hover {
+    top: -20px;
+    left: 20px;
+    box-shadow:
+        0 0 0  -3px #001F54,
+        0 0 ,
+        0 0 0 -3px #EFEFEF,
+        0 0 ;
+    
+}
