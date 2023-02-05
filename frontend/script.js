@@ -1,4 +1,4 @@
-let serverUrl = "https://bcd1-169-234-118-86.ngrok.io/";
+let serverUrl = "https://b587-169-234-118-86.ngrok.io/";
 
 function callBackend() {
     fetch(serverUrl)
