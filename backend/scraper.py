@@ -47,10 +47,10 @@ def scrape():
 
         parent_id = parent.get_attribute("id")
         study_list[parent_id]['Amenities'].append(amenity)
-
-    json_object = json.loads(json.dumps(study_list))
-    json_formatted_str = json.dumps(json_object, indent=2)
-    return json_formatted_str
+    #json_object = json.loads(json.dumps(study_list))
+    #json_formatted_str = json.dumps(json_object)
+    #return json_formatted_str
+    return study_list
 
 if __name__ == '__main__':
     print(scrape())
