@@ -52,5 +52,6 @@ def scrape():
     #return json_formatted_str
     return study_list
 
+
 if __name__ == '__main__':
     print(scrape())
